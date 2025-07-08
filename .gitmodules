@@ -1,0 +1,3 @@
+[submodule "lib/InkList"]
+	path = lib/InkList
+	url = https://github.com/Joseph-Matteo-Scorsone/InkList

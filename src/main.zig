@@ -43,7 +43,7 @@ const ActorServer = struct {
 
     pub fn receive(self: *Self, allocator: Allocator, msg: *Message) void {
         _ = allocator;
-        // Every time we get a custom payload, increment the counter.
+        // Every time we get a custom payload.
         switch (msg.instruction) {
             .custom => |_| {
                 // handle

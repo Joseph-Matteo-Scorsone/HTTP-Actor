@@ -139,6 +139,7 @@ pub fn main() !void {
     const init_msg = try Message.makeFuncPayload(allocator, server, ActorServerContext.handleInit, ctx, ActorServerContext.deinit, ActorServerContext.clone);
     try engine.sendMessage(server, init_msg);
 
+    // sync everything
     std.time.sleep(100 * std.time.ns_per_ms);
 
     const server_state = try engine.getActorState(ActorServer, server);
